@@ -30,7 +30,7 @@ double Stopwatch::Seconds()
     return (!running)
         ? double(time_span.count()) *
         CHRONO::steady_clock::period::num / CHRONO::steady_clock::period::den
-        : double((beg - CHRONO::steady_clock::now()).count()) *
+        : double((CHRONO::steady_clock::now() - beg).count()) *
         CHRONO::steady_clock::period::num / CHRONO::steady_clock::period::den;
 }
 
