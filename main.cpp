@@ -16,23 +16,26 @@
 #include "stopwatch.h"
 #include <iostream>
 int main() {
-	Stopwatch t;
+    Stopwatch t;
+
     t.Start();
     std::cout << "Starting time..." << std::endl;
 
     std::cout << "Stopping time..." << std::endl;
     t.Stop();
-    std::cout << '\t' << t.Seconds() << std::endl;
+	
+    std::cout << "Seconds: " << t.Seconds() << std::endl;
 
     t.Start();
     std::cout << "Starting time..." << std::endl;
 
     std::cout << "Checking time..." << std::endl;
-    std::cout << '\t' << t.Seconds() << std::endl;
+    std::cout << "Seconds: " << t.Seconds() << std::endl;
 
     std::cout << "Stopping time..." << std::endl;
     t.Stop();
-    std::cout << '\t' << t.Seconds() << std::endl;
+	
+    std::cout << "Seconds: " << t.Seconds() << std::endl;
 
     return 0;
 
